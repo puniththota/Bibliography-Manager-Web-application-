@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <header class="bg-primary text-white">
+    <style>
+      body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: white;
+}
+.box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #191919;
+  text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+.h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: dodgerblue;
+  text-align: center;
+  margin: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-family: sans-serif;
+}
+</style>
+    <meta charset="utf-8">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  </header>
+  <body>
+   <div>
+        <h1>Update Profile</h1>
+   </div>   
+
+<form class="box" action="home.html" method="post">
+ 
+  <h1>Full Name</h1><input type="text" name="name" placeholder="Punith Thota">
+  <h1>Email ID</h1> <input type="text" name="email" placeholder="abc@gmail.com">
+
+  <input type="submit" name="signup" value="Update">
+</form>
+
+
+  </body>
+</html>

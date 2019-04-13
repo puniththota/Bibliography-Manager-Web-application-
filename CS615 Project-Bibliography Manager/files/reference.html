@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  width: 100%;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover{
+  opacity: 1;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  padding-bottom: 5%;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=year],select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=year]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+#libraries {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+#libraries td, #libraries th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#libraries tr:nth-child(even){background-color: #f2f2f2;}
+
+#libraries tr:hover {background-color: #ddd;}
+
+#libraries th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: dodgerblue;
+  color: white;
+}
+/* Set a style for the search button */
+.searchbtn {
+  background-color: DodgerBlue;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 16px;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+}
+.searchbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+  <div class="container">
+        <hr>
+    <label for="author"><b>Author</b></label>
+    <input type="text" placeholder="Enter Author name" name="author" required>
+      <label for="title"><b>Title</b></label>
+    <input type="text" placeholder="Enter title" name="title" required>
+      <label for="year"><b>Year</b></label>
+    <input type="year" placeholder="Enter year" name="year" required>
+    <label for="year"><b>Type</b></label>
+    <select>
+        <option value="volvo">Article</option>
+        <option value="saab">Book</option>
+        <option value="opel">Improceedings</option>
+        <option value="opel">Collection</option>
+      </select>
+      <form action="reference.html"><input type="submit" class="searchbtn" value="Add Reference"></input></form>
+    <table id="libraries">
+        <tr>
+          <th>Author</th>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Type</th>
+          
+        </tr>
+        <tr>
+          <td><input id="checkbox" type="checkbox">ABC</td>
+          <td>CS605</td>
+          <td>2017</td>
+          <td>Article</td>
+        
+        </tr>
+        <tr>
+          <td><input id="checkbox" type="checkbox">BCD</td>
+          <td>CS615</td>
+          <td>2018</td>
+          <td>Book</td>
+         
+        </tr>
+        <tr>
+          <td><input id="checkbox" type="checkbox">CDE</td>
+          <td>CS610</td>
+          <td>2019</td>
+          <td>Improceedings</td>
+         
+        </tr>
+        
+          
+      </table>
+    <hr>
+    <form action="reference.html"><input type="submit" class="searchbtn" value="Delete Selected"></input></form>
+    <button class="searchbtn" onclick="openForm()">Move Reference</button>
+    <form action="updatereference.html"><input type="submit" class="searchbtn" value="Update Reference"></input></form>
+  
+  </div>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+<label for="year"><b>Enter library to which reference is to be moved</b></label>
+    <select>
+        <option value="lib1">Library 1</option>
+        <option value="lib2">Library 2</option>
+        <option value="lib3">Library 3</option>
+        <option value="lib4">Library 4</option>
+      </select>
+
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+
+</script>
+
+</body>
+</html>

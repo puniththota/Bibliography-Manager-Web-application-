@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  background-color: black;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  padding-bottom: 15%;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=year],select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=year]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.searchbtn {
+  background-color: DodgerBlue;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 16px;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+}
+.searchbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+  <div class="container">
+        <hr>
+    <label for="author"><b>Author</b></label>
+    <input type="text" placeholder="Enter Author name" name="author" required>
+      <label for="title"><b>Title</b></label>
+    <input type="text" placeholder="Enter title" name="title" required>
+      <label for="year"><b>Year</b></label>
+    <input type="year" placeholder="Enter year" name="year" required>
+    <label for="year"><b>Type</b></label>
+    <select>
+        <option value="volvo">Article</option>
+        <option value="saab">Book</option>
+        <option value="opel">Improceedings</option>
+        <option value="opel">Collection</option>
+      </select>
+      <form action="reference.html"><input type="submit" class="searchbtn" value="Update"></input></form>
+      </div>
+     
+
+</body>
+</html>

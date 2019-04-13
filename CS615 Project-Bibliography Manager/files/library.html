@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.h1{
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+.box input[type = "text"]{
+  border:0;
+  background: none;
+  font-weight: bold;
+  margin: 20px auto;
+  text-align:left;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+  font-weight: bold;
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: left;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+
+#libraries {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+#libraries td, #libraries th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#libraries tr:nth-child(even){background-color: #f2f2f2;}
+
+#libraries tr:hover {background-color: #ddd;}
+
+#libraries th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: dodgerblue;
+  color: white;
+}
+</style>
+</head>
+<body>
+  <form class="box" action="library.html">
+ <input type="text"  placeholder="Enter library name"></input>
+ <input type="submit" value="Add Library"></input>
+  </form>
+
+<table id="libraries">
+  <tr>
+    <th>Library Name</th>
+    <th>Date created</th>
+   
+    
+  </tr>
+  <tr>
+    <td><input id="checkbox" type="checkbox">Library 1</td>
+    <td>12/10/2017</td>
+  
+  </tr>
+  <tr>
+    <td><input id="checkbox" type="checkbox">Library 2</td>
+    <td>12/10/2017</td>
+   
+  </tr>
+  <tr>
+    <td><input id="checkbox" type="checkbox">Library 3</td>
+    <td>12/10/2017</td>
+   
+  </tr>
+  <tr>
+    <td><input id="checkbox" type="checkbox">Library 4</td>
+    <td>12/10/2017</td>
+   
+  </tr>
+  <tr>
+    <td><input id="checkbox" type="checkbox">Library 5</td>
+    <td>12/10/2017</td>
+   
+  </tr>
+  <tr>
+    <td><input id="checkbox" type="checkbox">Library 6</td>
+    <td>12/10/2017</td>
+  
+  </tr>
+  <tr>
+    <td><input id="checkbox" type="checkbox">Library 7</td>
+    <td>12/10/2017</td>
+  
+  </tr>   
+</table><br>
+<form action="library.html" class="box"><input type="submit" value="Delete Library"></input></form>
+<form action="reference.html" class="box"><input type="submit" value="View Library"></input></form>
+
+</body>
+</html>
